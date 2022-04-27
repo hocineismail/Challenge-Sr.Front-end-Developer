@@ -14,12 +14,24 @@
   npm install
 ```
 
+OR
+
+```bash
+  yarn install
+```
+
 ## Running Program
 
 To run program, run the following command.
 
 ```bash
   npm start
+```
+
+OR
+
+```bash
+  yarn start
 ```
 
 <!-- ## Running Tests
