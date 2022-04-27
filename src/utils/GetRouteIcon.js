@@ -1,4 +1,11 @@
 import React from "react";
+/**
+ *
+ *
+ * @param iconKey,i the key to return a specific icon
+ *
+ * @returns return svg as a component
+ */
 
 export default function GetRouteIcon({ iconKey }) {
   switch (iconKey) {

@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+html,
 body {
   /* font-font 'Mulish', sans-serif */
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   margin: 0;
-}
 
+  /* for Internet Explorer, Edge */
+
+  /* for Firefox */
+}
 
 .text-main-color {
   color: #0b344b;
@@ -19,26 +23,27 @@ body {
   margin-left: 40px;
   margin-top: 36px;
   font-size: 18px;
-  font-weight:500;
-  color: #0b344b
+  font-weight: 500;
+  color: #0b344b;
 }
 
 .side-bar {
+  z-index: 10;
   position: fixed;
+  transition: 0.3s;
   width: 300px;
   background-color: #f0f1f0;
   top: 0;
   bottom: 0;
 }
 
-.container {}
+.container {
+}
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-
-
 
 .bg-red {
   color: #c63040;
@@ -46,16 +51,16 @@ body {
 
 .logo {
   font-size: 32px;
-  margin: 33px  ;
-  color: #0b344b
-  
+  margin: 33px;
+  color: #0b344b;
 }
 
-.page-title {}
+.page-title {
+}
 
 .navigation {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .navigation-item {
@@ -106,12 +111,12 @@ h1 {
 }
 
 .card {
-   border:  1px solid #dcdcdc;
-   margin:  20px;
-   padding: 20px 23px;
-   border-radius: 10px;
-   display: grid;
-   grid-template-columns: auto 60px;
+  border: 1px solid #dcdcdc;
+  margin: 20px;
+  padding: 20px 23px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto 60px;
 }
 .card-title {
   color: #0b344b;
@@ -120,38 +125,78 @@ h1 {
   margin-top: 3px;
 }
 .card-text {
-  color:  #9ba7b1 ;
+  color: #9ba7b1;
   font-size: 14px;
-  margin-top:  40px 
+  margin-top: 40px;
 }
 .card-disabled {
-  border: 1px solid #dcdcdcb0 !important; 
- 
+  border: 1px solid #dcdcdcb0 !important;
 }
 .card-title-disabled {
   color: #0b344b87 !important;
 }
 .card-text-disabled {
   color: #9ba7b179 !important;
-} 
+}
 .status-toggle-active-disabled {
-   color: #60cc8b9e  !important
+  color: #60cc8b9e !important;
 }
 .status-toggle-inactive-disabled {
-  color: #d454638e !important
-
+  color: #d454638e !important;
 }
 .status-toggle-active {
-    font-size: 14px;
-    padding-top: 4px;
-    font-weight: bold;
-  color:  #60cc8b;
- 
+  font-size: 14px;
+  padding-top: 4px;
+  font-weight: bold;
+  color: #60cc8b;
 }
 .status-toggle-inactive {
   font-size: 14px;
   padding-top: 4px;
   font-weight: bold;
-   color: #d45464
-} 
+  color: #d45464;
+}
 
+.layout {
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+.menu-open {
+  left: 0px !important;
+}
+
+.btn-menu {
+  display: none;
+}
+@media only screen and (max-width: 1170px) {
+  .layout {
+    grid-template-columns: auto;
+  }
+  .btn-menu {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    display: block;
+    right: 30px;
+    top: 30px;
+  }
+  .side-bar {
+    top: 0;
+    left: -300px;
+    transition: 0.3s;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

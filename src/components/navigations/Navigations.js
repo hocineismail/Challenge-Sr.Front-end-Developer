@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
+import { menusState } from "../../reducers/menuSlice";
 import { routesState } from "../../reducers/routesSlice";
 import GetRouteIcon from "../../utils/GetRouteIcon";
 import ToggleSwitchIcon from "../ToggleSwitch/ToggleSwitchIcon";
@@ -10,6 +11,7 @@ export default function Navigations() {
   const history = useHistory();
   const location = useLocation();
   const { tabs, tabdata } = useSelector(routesState);
+  const { isOpen } = useSelector(menusState);
   const handleNavigate = (path) => {
     history.push(`/${path}`);
   };
@@ -17,7 +19,7 @@ export default function Navigations() {
   if (tabs.length === 0 || tabdata.length === 0) return <div>Fetching</div>;
   return (
     <div>
-      <div className="side-bar">
+      <div className={`side-bar ${!isOpen ? "menu-open" : ""}`}>
         <NavigationsTitle />
         <ul className="navigation">
           {tabs?.map((item) => {

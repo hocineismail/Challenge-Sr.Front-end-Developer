@@ -2,19 +2,13 @@ import React from "react";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import PluginCardText from "./PluginCardText";
 import PluginCardTitle from "./PluginCardTitle";
-
-export default function PluginCard({
-  title,
-  text,
-  isEnabled,
-  isDisabled,
-  currentPlugin,
-}) {
+import PropTypes from "prop-types";
+function PluginCard({ title, text, isEnabled, isDisabled, currentPlugin }) {
   return (
     <div className={`card ${isDisabled ? "card-disabled" : ""}`}>
       <div>
         <PluginCardTitle title={title} isDisabled={isDisabled} />
-        <PluginCardText title={text} isDisabled={isDisabled} />
+        <PluginCardText text={text} isDisabled={isDisabled} />
       </div>
       <div>
         <ToggleSwitch
@@ -26,3 +20,12 @@ export default function PluginCard({
     </div>
   );
 }
+PluginCard.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+  isEnabled: PropTypes.bool,
+  isDisabled: PropTypes.bool,
+  currentPlugin: PropTypes.string,
+};
+
+export default PluginCard;

@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { onActivePlugin, onInactivePlugin } from "../../actions/statusAction";
 import useCurrentTab from "../../hooks/useCurrentTab";
 import { routesState } from "../../reducers/routesSlice";
-
-export default function ToggleSwitch({ checked, disabled, currentPlugin }) {
+import PropTypes from "prop-types";
+function ToggleSwitch({ checked, disabled, currentPlugin }) {
   const dispatch = useDispatch();
   const { tabdata } = useSelector(routesState);
   const [ischecked, setisChecked] = useState(checked);
@@ -68,3 +68,10 @@ export default function ToggleSwitch({ checked, disabled, currentPlugin }) {
     </>
   );
 }
+ToggleSwitch.propTypes = {
+  checked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  currentPlugin: PropTypes.string,
+};
+
+export default ToggleSwitch;

@@ -2,7 +2,10 @@ import axios from "axios";
 import { URL } from "../constants/constants";
 
 import { onSetTabdata, onSetTabs } from "../reducers/routesSlice";
-
+//**
+//* API FETCH TABS
+// * @returns DATA TO REDUCERS
+// */
 export function onFetchTabs() {
   return function (dispatch) {
     const config = {

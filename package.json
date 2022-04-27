@@ -10,6 +10,7 @@
     "axios": "^0.27.1",
     "eslint-visitor-keys": "^3.3.0",
     "json-server": "^0.17.0",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^8.0.1",
@@ -26,7 +27,6 @@
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   },
- 
   "eslintConfig": {
     "extends": [
       "react-app",

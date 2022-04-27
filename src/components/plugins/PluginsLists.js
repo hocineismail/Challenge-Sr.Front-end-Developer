@@ -10,12 +10,10 @@ import { isDisabled } from "../../utils/isDisabled";
 
 import PluginCard from "./PluginCard";
 
-export default function PluginsLists() {
+function PluginsLists() {
   const { loading, plugins, disabledAll } = useSelector(pluginsState);
-
   const dispatch = useDispatch();
   const { currentTab } = useCurrentTab();
-
   React.useEffect(() => {
     dispatch(onFetchPlugins());
   }, [dispatch]);
@@ -53,3 +51,4 @@ export default function PluginsLists() {
     </div>
   );
 }
+export default PluginsLists;

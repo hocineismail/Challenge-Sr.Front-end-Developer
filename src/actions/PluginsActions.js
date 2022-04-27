@@ -1,7 +1,10 @@
 import axios from "axios";
 import { URL } from "../constants/constants";
 import { onSetPlugins } from "../reducers/pluginsSlice";
-
+//**
+//* API FETCH PLUGINS
+// * @returns DATA TO REDUCERS
+// */
 export function onFetchPlugins() {
   return function (dispatch) {
     const config = {

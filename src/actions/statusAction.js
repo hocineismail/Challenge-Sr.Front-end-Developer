@@ -2,7 +2,10 @@ import axios from "axios";
 import { URL } from "../constants/constants";
 
 import { onSetTabdata } from "../reducers/routesSlice";
-
+//**
+//* API UPDATE STATUS
+// * @returns DATA TO REDUCERS
+// */
 export function onActivePlugin({ currentPlugin, currentTab, tabdata }) {
   return function (dispatch) {
     let newActive = [...tabdata[currentTab].active, currentPlugin];
@@ -45,6 +48,12 @@ export function onActivePlugin({ currentPlugin, currentTab, tabdata }) {
     }
   };
 }
+
+//**
+//* API UPDATE STATUS
+// * @returns DATA TO REDUCERS
+// */
+
 export function onInactivePlugin({ currentPlugin, currentTab, tabdata }) {
   return function (dispatch) {
     let inactive = [...tabdata[currentTab].inactive, currentPlugin];
@@ -89,6 +98,11 @@ export function onInactivePlugin({ currentPlugin, currentTab, tabdata }) {
     }
   };
 }
+
+//**
+//* API UPDATE STATUS
+// * @returns DATA TO REDUCERS
+// */
 
 export function onDisableAllPlugins({ tabdata }) {
   return function (dispatch) {
@@ -140,6 +154,11 @@ export function onDisableAllPlugins({ tabdata }) {
     }
   };
 }
+
+//**
+//* API UPDATE STATUS
+// * @returns DATA TO REDUCERS
+// */
 
 export function onEnablellPlugins({ tabdata }) {
   return function (dispatch) {

@@ -13,7 +13,7 @@ import {
   pluginsState,
 } from "../../reducers/pluginsSlice";
 
-export default function ToggleSwitchIcon() {
+function ToggleSwitchIcon() {
   const [checked, setChecked] = useState(true);
   const { tabdata, countDisbaled } = useSelector(routesState);
   const { count, loading } = useSelector(pluginsState);
@@ -104,3 +104,5 @@ export default function ToggleSwitchIcon() {
     </div>
   );
 }
+
+export default ToggleSwitchIcon;
