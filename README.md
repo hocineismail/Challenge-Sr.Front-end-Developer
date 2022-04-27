@@ -17,7 +17,7 @@
 OR
 
 ```bash
-  yarn yarn
+  yarn install
 ```
 
 ## Running Program
